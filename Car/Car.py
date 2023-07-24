@@ -10,8 +10,7 @@ class Car(Engine, Battery):
                          last_service_date=last_service_date)
 
     def needs_service(self):
-        print(self.engine_should_be_serviced()
-              or self.battery_should_be_serviced())
+        return self.engine_should_be_serviced() or self.battery_should_be_serviced()
 
 
 # some_car = Car(engine='capulet', battery='nubbin', last_service_date='2022-12-21',
