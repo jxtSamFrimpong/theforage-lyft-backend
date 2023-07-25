@@ -7,20 +7,20 @@ class CarFactory:
 
     def calliope(self, last_service_date, current_mileage, last_service_mileage):
         self.car = Car(engine='capulet', battery='spindler', last_service_date=last_service_date,
-                       current_mileage=current_mileage, last_service_mileage=last_service_mileage)
+                       current_mileage=current_mileage, last_service_mileage=last_service_mileage, tyre_type='octoprime')
 
     def glissade(self, last_service_date, current_mileage, last_service_mileage):
         self.car = Car(engine='willoughby', battery='spindler', last_service_date=last_service_date,
-                       current_mileage=current_mileage, last_service_mileage=last_service_mileage)
+                       current_mileage=current_mileage, last_service_mileage=last_service_mileage, tyre_type='octoprime')
 
     def palindrome(self, last_service_date, warning_light_is_on):
         self.car = Car(engine='sternman', battery='spindler',
-                       last_service_date=last_service_date, warning_light_is_on=warning_light_is_on)
+                       last_service_date=last_service_date, warning_light_is_on=warning_light_is_on, tyre_type='octoprime')
 
     def rorschach(self, last_service_date, current_mileage, last_service_mileage):
         self.car = Car(engine='willoughby', battery='nubbin', last_service_date=last_service_date,
-                       current_mileage=current_mileage, last_service_mileage=last_service_mileage)
+                       current_mileage=current_mileage, last_service_mileage=last_service_mileage, tyre_type='octoprime')
 
     def thovex(self, last_service_date, current_mileage, last_service_mileage):
         self.car = Car(engine='capulet', battery='nubbin', last_service_date=last_service_date,
-                       current_mileage=current_mileage, last_service_mileage=last_service_mileage)
+                       current_mileage=current_mileage, last_service_mileage=last_service_mileage, tyre_type='octoprime')

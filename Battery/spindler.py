@@ -9,8 +9,8 @@ class SpindlerBattery:
 
     def battery_should_be_serviced(self):
         date_difference = self.current_date - self.last_service_date
-        two_years = timedelta(days=365 * 2)
-        if date_difference >= two_years:
+        three_years = timedelta(days=365 * 3)
+        if date_difference >= three_years:
             return True
         else:
             return False

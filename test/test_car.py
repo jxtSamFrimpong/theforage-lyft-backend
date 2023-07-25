@@ -24,7 +24,9 @@ class TestCalliope(unittest.TestCase):
 
         car = CarFactory()
         car.calliope(last_service_date=last_service_date, current_mileage=current_mileage, last_service_mileage=last_service_mileage)
-        self.assertFalse(car.car.needs_service())
+        self.assertFalse(car.car.battery_should_be_serviced())
+        tyre_service = sum(car.car.sensors)
+        self.assertTrue(car.car.needs_service() if tyre_service >= 3.0 else not car.car.needs_service())
 
     def test_engine_should_be_serviced(self):
         last_service_date = datetime.today().date().strftime(format='%Y-%m-%d')
@@ -42,7 +44,9 @@ class TestCalliope(unittest.TestCase):
 
         car = CarFactory()
         car.calliope(last_service_date=last_service_date, current_mileage=current_mileage, last_service_mileage=last_service_mileage)
-        self.assertFalse(car.car.needs_service())
+        self.assertFalse(car.car.engine_should_be_serviced())
+        tyre_service = sum(car.car.sensors)
+        self.assertTrue(car.car.needs_service() if tyre_service >= 3.0 else not car.car.needs_service())
 
 
 class TestGlissade(unittest.TestCase):
@@ -64,7 +68,9 @@ class TestGlissade(unittest.TestCase):
 
         car = CarFactory()
         car.glissade(last_service_date=last_service_date, current_mileage=current_mileage, last_service_mileage=last_service_mileage)
-        self.assertFalse(car.car.needs_service())
+        self.assertFalse(car.car.battery_should_be_serviced())
+        tyre_service = sum(car.car.sensors)
+        self.assertTrue(car.car.needs_service() if tyre_service >= 3.0 else not car.car.needs_service())
 
     def test_engine_should_be_serviced(self):
         last_service_date = datetime.today().date().strftime(format='%Y-%m-%d')
@@ -82,7 +88,9 @@ class TestGlissade(unittest.TestCase):
 
         car = CarFactory()
         car.glissade(last_service_date=last_service_date, current_mileage=current_mileage, last_service_mileage=last_service_mileage)
-        self.assertFalse(car.car.needs_service())
+        self.assertFalse(car.car.engine_should_be_serviced())
+        tyre_service = sum(car.car.sensors)
+        self.assertTrue(car.car.needs_service() if tyre_service >= 3.0 else not car.car.needs_service())
 
 
 class TestPalindrome(unittest.TestCase):
@@ -104,7 +112,9 @@ class TestPalindrome(unittest.TestCase):
 
         car = CarFactory()
         car.palindrome(last_service_date=last_service_date, warning_light_is_on=warning_light_is_on)
-        self.assertFalse(car.car.needs_service())
+        self.assertFalse(car.car.battery_should_be_serviced())
+        tyre_service = sum(car.car.sensors)
+        self.assertTrue(car.car.needs_service() if tyre_service >= 3.0 else not car.car.needs_service())
 
     def test_engine_should_be_serviced(self):
         last_service_date = datetime.today().date().strftime(format='%Y-%m-%d')
@@ -120,7 +130,9 @@ class TestPalindrome(unittest.TestCase):
 
         car = CarFactory()
         car.palindrome(last_service_date=last_service_date, warning_light_is_on=warning_light_is_on)
-        self.assertFalse(car.car.needs_service())
+        self.assertFalse(car.car.engine_should_be_serviced())
+        tyre_service = sum(car.car.sensors)
+        self.assertTrue(car.car.needs_service() if tyre_service >= 3.0 else not car.car.needs_service())
 
 
 class TestRorschach(unittest.TestCase):
@@ -142,7 +154,9 @@ class TestRorschach(unittest.TestCase):
 
         car = CarFactory()
         car.rorschach(last_service_date=last_service_date, current_mileage=current_mileage, last_service_mileage=last_service_mileage)
-        self.assertFalse(car.car.needs_service())
+        self.assertFalse(car.car.battery_should_be_serviced())
+        tyre_service = sum(car.car.sensors)
+        self.assertTrue(car.car.needs_service() if tyre_service >= 3.0 else not car.car.needs_service())
 
     def test_engine_should_be_serviced(self):
         last_service_date = datetime.today().date().strftime(format='%Y-%m-%d')
@@ -160,7 +174,9 @@ class TestRorschach(unittest.TestCase):
 
         car = CarFactory()
         car.rorschach(last_service_date=last_service_date, current_mileage=current_mileage, last_service_mileage=last_service_mileage)
-        self.assertFalse(car.car.needs_service())
+        self.assertFalse(car.car.engine_should_be_serviced())
+        tyre_service = sum(car.car.sensors)
+        self.assertTrue(car.car.needs_service() if tyre_service >= 3.0 else not car.car.needs_service())
 
 
 class TestThovex(unittest.TestCase):
@@ -182,7 +198,9 @@ class TestThovex(unittest.TestCase):
 
         car = CarFactory()
         car.thovex(last_service_date=last_service_date, current_mileage=current_mileage, last_service_mileage=last_service_mileage)
-        self.assertFalse(car.car.needs_service())
+        self.assertFalse(car.car.battery_should_be_serviced())
+        tyre_service = sum(car.car.sensors)
+        self.assertTrue(car.car.needs_service() if tyre_service >= 3.0 else not car.car.needs_service())
 
     def test_engine_should_be_serviced(self):
         last_service_date = datetime.today().date().strftime(format='%Y-%m-%d')
@@ -200,7 +218,9 @@ class TestThovex(unittest.TestCase):
 
         car = CarFactory()
         car.thovex(last_service_date=last_service_date, current_mileage=current_mileage, last_service_mileage=last_service_mileage)
-        self.assertFalse(car.car.needs_service())
+        self.assertFalse(car.car.engine_should_be_serviced())
+        tyre_service = sum(car.car.sensors)
+        self.assertTrue(car.car.needs_service() if tyre_service >= 3.0 else not car.car.needs_service())
 
 
 if __name__ == '__main__':
