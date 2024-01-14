@@ -10,7 +10,7 @@ pool:
   name: AZPoolNew-SonarQube
 
 steps:
-- script: sleep 90
+- script: sleep 300
   displayName: 'Run a one-line script'
 
 - script: |
