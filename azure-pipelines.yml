@@ -7,7 +7,7 @@ trigger:
 - main
 
 pool:
-  name: Bukaya
+  name: AZPoolNew-SonarQube
 
 steps:
 - script: sleep 90
